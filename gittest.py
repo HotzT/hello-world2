@@ -2,6 +2,12 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import pandas as pd
+from flask import Flask, Response
+import base64
+from dash.dependencies import Input, Output
+import cv2
+import dash_table
+import numpy as np
 import plotly.graph_objs as go
 
 app = dash.Dash()
@@ -14,6 +20,8 @@ df = pd.read_csv(
 
 
 app.layout = html.Div([
+    html.Div([
+        html.H2("HAllo")]),
     dcc.Graph(
         id='life-exp-vs-gdp',
         figure={
